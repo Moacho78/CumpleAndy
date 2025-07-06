@@ -1,35 +1,12 @@
 function playMusic() {
   const music = document.getElementById('bg-music');
-  music.play();
-  document.getElementById('play-button').style.display = 'none';
-}
-
-// Confeti y música YouTube
-let player;
-
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '0',
-    width: '0',
-    videoId: '5ar42kauTd8', // ID del video
-    playerVars: {
-      autoplay: 0,
-      loop: 1,
-      playlist: '5ar42kauTd8',
-    },
-    events: {
-      onReady: onPlayerReady
-    }
-  });
-}
-
-function onPlayerReady(event) {
-  const button = document.getElementById('play-button');
-  button.addEventListener('click', () => {
-    event.target.playVideo();
-    event.target.unMute();
-    button.style.display = 'none';
-  });
+  music.play()
+    .then(() => {
+      document.getElementById('play-button').style.display = 'none';
+    })
+    .catch(error => {
+      console.error("No se pudo reproducir el audio:", error);
+    });
 }
 
 // Confeti
@@ -79,12 +56,8 @@ function launchConfetti() {
 // Al cargar
 window.onload = () => {
   launchConfetti();
+  document.getElementById("play-btn").addEventListener("click", playMusic);
 };
-
-// Cargar API de YouTube
-const tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-document.body.appendChild(tag);
 
 
 
