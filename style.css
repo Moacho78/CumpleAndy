@@ -119,4 +119,36 @@ canvas#confetti-canvas {
   z-index: 9999;
 }
 
+.youtube-audio {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.play-music-btn {
+  background-color: #ff79c6;
+  color: #1a1a1a;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.play-music-btn:hover {
+  background-color: #ff92d0;
+  transform: scale(1.05);
+}
+
+.youtube-audio {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
 

@@ -6,6 +6,7 @@
   <title>Feliz Cumple, Hermana</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>🎂 ¡Feliz Cumpleaños, hermana querida! 🎉</h1>
@@ -13,7 +14,6 @@
     <div class="image-section">
       <div class="arrow">⬇️</div>
       <div class="image-upload">
-       
         <input type="file" id="file-input" accept="image/*" />
       </div>
       <p class="photo-message">✨ Aquí debería ir nuestra primera foto juntos 📸❤️</p>
@@ -24,10 +24,23 @@
       <p>🫂 Aunque a veces peleamos, nada cambia lo especial que eres para mí.</p>
       <p>🚀 Que tu vida siga llena de sueños cumplidos, yo siempre estaré a tu lado. Te quiere: tu hermano. 👦</p>
     </div>
-  </div>
 
-  <canvas id="confetti-canvas"></canvas>
-  <script src="script.js"></script>
+    <!-- Botón de play -->
+    <div id="play-button" style="text-align: center; margin-top: 20px;">
+      <button onclick="playMusic()" style="font-size: 20px; padding: 10px 20px;">🔊 Dale play para vivir esta sorpresa</button>
+    </div>
+
+    <!-- Audio oculto -->
+    <audio id="bg-music">
+      <source src="LAS MAÑANITAS - Vicente Fernández (LETRA).mp3" type="audio/mpeg">
+    </audio>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+    <script src="audio.js"></script>
+  </div>
 </body>
 </html>
+
 
